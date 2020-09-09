@@ -1,0 +1,27 @@
+/*
+Mixins concernant les différents types de flex
+*/
+@mixin flex-center-item {
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin horizontal-flex {
+    display: flex;
+    flex-direction: row;
+}
+
+@mixin vertical-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin vertical-flex-center {
+    @include vertical-flex;
+    @include flex-center-item;
+}
+
+@mixin horizontal-flex-center {
+    @include horizontal-flex;
+    @include flex-center-item;
+}

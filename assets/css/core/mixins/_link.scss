@@ -1,0 +1,25 @@
+/*
+Mixins concernant les différents types de liens du site
+*/
+@mixin no-underline-link {
+    text-decoration: none;
+    color: getcolor("primary");
+}
+
+@mixin header-link {
+    @include headline6;
+    @include no-underline-link;
+    color: getcolor("primary");
+}
+
+@mixin header-sub-link {
+    @include bodyText1;
+    @include no-underline-link;
+    color: getcolor("primary");
+}
+
+@mixin svg-link {
+    @include caption;
+    @include no-underline-link;
+    color: getcolor("primary");
+}

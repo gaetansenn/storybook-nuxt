@@ -1,0 +1,11 @@
+# .dockerignore permet de specifier les fichiers / repertoires a ignorer lors de la copie des fichiers dans le docker
+// .dockerignore
+Dockerfile
+README.md
+
+.nuxt
+node_modules
+npm-debug.log
+
+.git
+.gitignore

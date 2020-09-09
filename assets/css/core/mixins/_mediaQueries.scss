@@ -1,0 +1,18 @@
+/*
+Mixins concernant les différents media queries utilisées dans le site
+*/
+@mixin for-desktop {
+    @media (min-width: map-get($mdc-layout-grid-breakpoints, "desktop")) { @content; }
+}
+
+@mixin for-tablet-and-desktop {
+    @media (min-width: map-get($mdc-layout-grid-breakpoints, "tablet")) { @content; }
+}
+
+@mixin for-tablet {
+    @media (min-width: map-get($mdc-layout-grid-breakpoints, "tablet")) and (max-width: map-get($mdc-layout-grid-breakpoints, "desktop")) { @content; }
+}
+
+@mixin for-mobile {
+    @media (max-width: map-get($mdc-layout-grid-breakpoints, "tablet")) { @content; }
+}

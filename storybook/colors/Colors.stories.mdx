@@ -1,0 +1,16 @@
+import { Meta, Canvas, Story, ArgsTable } from '@storybook/addon-docs/blocks';
+import Color from './Color.vue';
+
+<Meta title="Core/Color" component={Color} />
+
+# Color
+
+Le Composant Color est un composant de documentation : il affiche l'ensemble des couleurs utilisées sur ce projet.
+
+export const ColorsList = (args) => ({
+    template: '<Color />',
+});
+
+<Story name="ColorsList">
+    {ColorsList.bind({})}
+</Story>

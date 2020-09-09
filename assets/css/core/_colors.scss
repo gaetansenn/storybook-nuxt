@@ -1,0 +1,32 @@
+// scss map des couleurs
+$theme-colors: (
+    "primary": #111,
+    "secondary": #ee8f7a,
+    "secondary-two": #f6b1ab,
+    "tertiary-one": #fff,
+    "tertiary-two": #f4f4f4,
+    "tertiary-three": #dbdbdb,
+    "tertiary-four": #ababab,
+    "tertiary-five": #7c7c7c,
+    "tertiary-six": #111,
+    "info-background": #e1ebf7,
+    "info-text": #000854,
+    "info-badge": #4994ee,
+    "warning-background": #fcf9da,
+    "warning-text": #5a4b00,
+    "warning-badge": #f9bf00,
+    "danger-background": #fcdfd7,
+    "danger-text": #6a0000,
+    "danger-badge": #e83200,
+    "success-background": #f1faf3,
+    "success-text": #035a00,
+    "success-badge": #00d988,
+    "fid-background": #efe5ee,
+    "fid-text": #4d0060,
+    "fid-badge": #aa00d4,
+);
+
+// function pour récupérer une couleur
+@function getcolor($color) {
+    @return map-get($theme-colors, $color);
+}

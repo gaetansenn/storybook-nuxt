@@ -1,0 +1,117 @@
+/*
+Mixins concernant les différents types de boutons
+*/
+@mixin button {
+    @include horizontal-flex-center;
+    @include buttonText;
+    cursor: pointer;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:disabled {
+        color: getcolor("tertiary-four");
+        border-color: getcolor("tertiary-three");
+        background: getcolor("tertiary-three");
+        cursor: not-allowed;
+    }
+}
+
+@mixin button-with-icon {
+    @include horizontal-flex-center;
+    @include buttonText;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    border-radius: 0.25rem;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:disabled {
+        svg {
+            fill: getcolor("tertiary-four");
+        }
+    }
+}
+
+@mixin button-no-border {
+    @include horizontal-flex-center;
+    @include buttonText;
+    height: 2.5rem;
+    padding: 0 1.5rem;
+    text-decoration: none;
+    border: 0;
+    background: none;
+    transition: all 0.3s;
+    &:disabled {
+        color: getcolor("tertiary-four");
+        cursor: not-allowed;
+    }
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+@mixin primary-button {
+    @include button;
+    display: inline-flex;
+    color: getcolor("tertiary-one");
+    border: 1px solid getcolor("primary");
+    background: getcolor("primary");
+    &:hover {
+        color: getcolor("primary");
+        background: getcolor("tertiary-one");
+    }
+}
+
+@mixin primary-button-with-icon {
+    @include primary-button;
+    &:hover {
+        svg {
+            fill: getcolor("primary");
+        }
+    }
+    svg {
+        fill: getcolor("tertiary-one");
+        margin: 0 0.5rem 0 0;
+    }
+}
+
+@mixin secondary-button {
+    @include button;
+    display: inline-flex;
+    color: getcolor("primary");
+    border: 1px solid getcolor("primary");
+    background: getcolor("tertiary-one");
+    &:hover {
+        color: getcolor("tertiary-one");
+        background: getcolor("primary");
+    }
+}
+
+@mixin secondary-button-with-icon {
+    @include secondary-button;
+    &:hover {
+        svg {
+            fill: getcolor("tertiary-one");
+        }
+    }
+    svg {
+        fill: getcolor("primary");
+        margin: 0 0.5rem 0 0;
+    }
+}
+
+@mixin primary-button-no-border {
+    @include button-no-border;
+    color: getcolor("primary");
+}
+
+@mixin secondary-button-no-border {
+    @include button-no-border;
+    color: getcolor("secondary");
+}
+
+@mixin tertiary-button-no-border {
+    @include button-no-border;
+    color: getcolor("tertiary-one");
+}

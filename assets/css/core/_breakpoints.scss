@@ -1,0 +1,46 @@
+$mdc-layout-grid-breakpoints: (
+    largedesktop: 1920px,
+    desktop: 1280px,
+    largetablet: 1024px,
+    tablet: 840px,
+    largephone: 600px,
+    phone: 0
+);
+
+$mdc-layout-grid-columns: (
+    largedesktop: 12,
+    desktop: 12,
+    largetablet: 8,
+    tablet: 8,
+    largephone: 4,
+    phone: 4,
+);
+
+$mdc-layout-grid-default-margin: (
+    largedesktop: 24px,
+    desktop: 24px,
+    largetablet: 24px,
+    tablet: 24px,
+    largephone: 16px,
+    phone: 16px,
+);
+
+$mdc-layout-grid-default-gutter: (
+    largedesktop: 24px,
+    desktop: 24px,
+    largetablet: 24px,
+    tablet: 24px,
+    largephone: 16px,
+    phone: 16px,
+);
+
+$mdc-layout-grid-column-width: (
+    largedesktop: 72px,
+    desktop: 72px,
+    largetablet: 72px,
+    tablet: 72px,
+    largephone: 72px,
+    phone: 72px,
+);
+
+@import "~@material/layout-grid/mdc-layout-grid.import.scss";

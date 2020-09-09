@@ -1,0 +1,85 @@
+/*
+Styles global
+*/
+body,
+html {
+    font-family: "Gotham Book", Arial, sans-serif;
+    font-size: 16px;
+}
+
+#__layout {
+    height: 100vh;
+    overflow-x: hidden;
+    max-width: map-get($mdc-layout-grid-breakpoints, "largedesktop");
+    margin: 0 auto;
+    & > .mdc-layout-grid {
+        padding: 0;
+    }
+}
+
+h1 {
+    @include headline1;
+}
+
+h2 {
+    @include headline2;
+}
+
+h3 {
+    @include headline3;
+}
+
+h4 {
+    @include headline4;
+}
+
+h5 {
+    @include headline5;
+}
+
+h6 {
+    @include headline6;
+}
+
+main {
+    width: 100%;
+    @include vertical-flex-center;
+    & > div {
+        width: 100%;
+    }
+}
+
+.pmd {
+    &-hidden-desktop {
+        display: flex;
+        @include for-tablet-and-desktop {
+            display: none;
+        }
+    }
+    &-navLink {
+        @include header-link ;
+        transition: color 0.3s;
+        &:hover {
+            color: getcolor("secondary");
+        }
+    }
+    &-svgLink {
+        @include svg-link;
+        @include vertical-flex-center;
+        &::first-letter {
+            text-transform: uppercase;
+        }
+        &:hover {
+            color: getcolor("secondary");
+            transition: all 0.3s;
+        }
+    }
+    &-svg {
+        width: 1.5rem;
+        height: 1.5rem;
+        margin: 0.25rem;
+    }
+    &-logo {
+        height: 2.5rem;
+    }
+}
